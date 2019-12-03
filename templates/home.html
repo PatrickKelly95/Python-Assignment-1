@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+  <title>Home Page</title>
+</head>
+<body>
+
+<div class="header">
+  <h1>FIFA 19 Ultimate Team Player Dataset</h1>
+  <p>Detailed statistics on the dataset</p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img src="../static/player.jpg" alt="Player" style="width:100%">
+      <button onclick="location.href='http://127.0.0.1:5000/players'" class="btn">Player</button>
+  </div>
+  <div class="column">
+    <img src="../static/club.jpg" alt="Club" style="width:100%">
+      <button onclick="location.href='http://127.0.0.1:5000/clubs'" class="btn">Club</button>
+  </div>
+  <div class="column">
+    <img src="../static/country.jpg" alt="Country" style="width:100%">
+      <button onclick="location.href='http://127.0.0.1:5000/countries'" class="btn">Country</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Player Statistics</h2>
+    <p>Statistics to do with player data and attributes</p>
+  </div>
+  <div class="column">
+    <h2>Club Statistics</h2>
+    <p>Statistics to do with club data</p>
+  </div>
+  <div class="column">
+    <h2>Country Statistics</h2>
+    <p>Statistics to do with country data</p>
+  </div>
+</div>
+</body>
+</html>

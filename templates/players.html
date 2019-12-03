@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Stats</title>
+
+<style>
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn {
+      display: block;
+      max-width: 300px;
+      margin: auto;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .header {
+      padding: 15px;
+      text-align: center;
+      background: #1abc9c;
+      color: white;
+      font-size: 30px;
+    }
+
+    .myList {
+        width: 400px;
+        padding: 0;
+        margin: 100px auto;
+        border: 1px solid #bbb;
+        border-radius: 7px 7px 0 0;
+
+    }
+
+    .myList li{
+        list-style: none;
+        background: #eee;
+        border-top: 1px solid #ccc;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .myList li:first-child {
+        background: #36c;
+        color: white;
+        border: none;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .column {
+      text-align: center;
+    }
+
+    .players {
+        text-align: center;
+    }
+
+    p  {
+      color: blue;
+      font-size: 130%;
+    }
+
+    .space {
+        padding-top: 10px;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <div class="header">
+      <h1>Player Statistics</h1>
+      <p>Statistics to do with player data and attributes</p>
+    </div>
+    <div class="space">
+        <button onclick="location.href='http://127.0.0.1:5000/'" class="btn">Home</button>
+    </div>
+    <div class="players">
+        <h1>Number of Players</h1>
+        <p>{{ total_no_players }}</p>
+        <h1>Average Age of Players</h1>
+        <p>{{ average_age }}</p>
+        <h1>Youngest age of the list</h1>
+        <p>{{ min_age }}</p>
+        <h1>Oldest age of the list</h1>
+        <p>{{ max_age }}</p>
+        <h1>Average Height of Players</h1>
+        <p>{{ average_height }}</p>
+        <h1>Average Weight of Players</h1>
+        <p>{{ average_weight }}</p>
+        <h1>Correlation between age and rating</h1>
+        <p>{{ age_rating_correlation }}</p>
+        <h1>Correlation between age and pace</h1>
+        <p>{{ age_pace_correlation }}</p>
+        <h1>Correlation between passing short and long</h1>
+        <p>{{ pass_short_long_correlation }}</p>
+    </div>
+    <div class="column">
+        <ul class="myList">
+                <li>5 Top Rated Players</li>
+            {% for player in top_five_players %}
+                <li>{{ player }}</li>
+            {% endfor %}
+        </ul>
+
+        <ul class="myList">
+                <li>5 Worst Rated Players</li>
+            {% for player in worst_five_players %}
+                <li>{{ player }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="players">
+        <h1>Variance of shooting ability</h1>
+        <p>{{ variance }}</p>
+        <h1>Standard deviation of shooting ability</h1>
+        <p>{{ standard_dev }}</p>
+    </div>
+    <div id="age_bar_chart">
+       <embed type="image/svg+xml" src= {{ age_bar_chart|safe }} />
+    </div>
+</body>
+</html>
