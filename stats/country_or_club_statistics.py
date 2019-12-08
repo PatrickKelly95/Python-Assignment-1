@@ -67,12 +67,12 @@ def get_sum_players_team(team):
     Parameters
     ----------
     team : str
-        A country or club value passed depending on which route is used
+        A country or club string passed depending on which route is used
 
     Returns
     -------
     chart
-        The dictionary containing key: country/club and values: amount of players for each country/club
+        Chart with amount of players for each country/club
 
     int
         The amount of countries/clubs in the list

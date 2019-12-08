@@ -7,7 +7,7 @@ from math import sqrt
 
 def calc_correlation(x_values, y_values):
     """
-    Calculate the correlation of two list of numbers
+    Calculate the correlation of two lists of numbers
 
     Parameters
     ----------

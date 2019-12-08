@@ -28,7 +28,7 @@ def request_csv_file():
 
 def check_if_csv_file_exists():
     """
-    Check if csv file is exists otherwise download it
+    Check if the csv file exists otherwise authorize and download it
 
     """
 

@@ -329,8 +329,10 @@ def get_variance_shooting():
 
     Returns
     -------
-    float
+    str
         The variance of the shooting ability
+    str
+        The standard deviation of the shooting ability
     """
 
     logging.info("Variance of data over shooting")
